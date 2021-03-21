@@ -6,6 +6,7 @@ const MainPage = () => {
         <s.ContentCenter>
             <s.MainContainer>
                 <p className="title">오늘 할 일</p>
+<<<<<<< HEAD
                 <form>
                     <input placeholder="할 일을 입력하세요" className="todolistInput"></input>
                     <button className="addBtn">추가</button>
@@ -17,6 +18,8 @@ const MainPage = () => {
                     <li>안녕</li>
                     <li>안녕</li>
                 </s.listContainer>
+=======
+>>>>>>> master
             </s.MainContainer>
         </s.ContentCenter>
     );

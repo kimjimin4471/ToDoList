@@ -15,6 +15,7 @@ export const MainContainer = styled.div`
     margin-top: 4rem;
 
     .title{
+<<<<<<< HEAD
         padding: 2rem;
         font-size: 2.5rem;
         text-align: center;
@@ -57,5 +58,8 @@ export const listContainer = styled.ul`
     li{
         cursor: pointer;
         margin-bottom: 20px;
+=======
+        
+>>>>>>> master
     }
 `
