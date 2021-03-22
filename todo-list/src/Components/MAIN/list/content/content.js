@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import * as s from './style';
 
 const Content = (props) => {
     const [contentChecked, setContentChecked] = useState(false);
@@ -13,8 +14,13 @@ const Content = (props) => {
     };
 
     return(
-        <li onClick={onClickContent} style={contentChecked ? {textDecorationLine: 
-        'line-through'} : null}>{props.value}</li>
+        <>
+            <s.ListContainer>
+                <li onClick={onClickContent} style={contentChecked ? {textDecorationLine: 
+                'line-through'} : null}>{props.value}</li>
+                <p>{contentChecked? "✅" : null}</p>
+            </s.ListContainer>
+        </>
     );
 }
 
