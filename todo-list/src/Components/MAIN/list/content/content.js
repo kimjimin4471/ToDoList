@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Content = (props) => {
+    const [contentChecked, setContentChecked] = useState(false);
+
+    const onClickContent = () =>{
+        if(contentChecked){
+            setContentChecked(false);
+        }
+        else {
+            setContentChecked(true);
+        }
+    };
+
     return(
-        <li>{props.value}</li>
+        <li onClick={onClickContent} style={contentChecked ? {textDecorationLine: 
+        'line-through'} : null}>{props.value}</li>
     );
 }
 
