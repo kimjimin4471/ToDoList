@@ -2,7 +2,7 @@ import React, {useState, memo} from 'react';
 import ListUl from './list/list';
 import * as s from './style';
 
-const MainPage = () => {
+const MainPage = memo(() => {
     const [ inputList, setInputList ] = useState("");
     const [ todolist, setTodolist ] = useState([]);
 
@@ -17,6 +17,7 @@ const MainPage = () => {
                 ...todolist,
                 inputList,
             ], console.log(todolist));
+            setInputList("");
         }
         else {
             alert("내용을 입력하세요.");
@@ -28,7 +29,7 @@ const MainPage = () => {
             <s.MainContainer>
                 <p className="title">오늘 할 일</p>
                 <form onSubmit={onSubmitList}>
-                    <input placeholder="할 일을 입력하세요" className="todolistInput" onChange={onChangeList}></input>
+                    <input placeholder="할 일을 입력하세요" className="todolistInput" onChange={onChangeList} value = {inputList}></input>
                     <button className="addBtn">추가</button>
                 </form>
 
@@ -38,6 +39,6 @@ const MainPage = () => {
             </s.MainContainer>
         </s.ContentCenter>
     );
-};
+});
 
 export default MainPage;

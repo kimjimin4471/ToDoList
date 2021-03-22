@@ -53,9 +53,16 @@ export const listContainer = styled.ul`
     width: 100%;
     list-style: none;
     font-size: 20px;
+    height: 550px;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
 
     li{
         cursor: pointer;
         margin-bottom: 20px;
+        width: 400px;
     }
 `

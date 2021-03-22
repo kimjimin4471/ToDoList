@@ -1,17 +1,18 @@
-import React from 'react';
+import React, {memo} from 'react';
+import Content from './content/content';
 
-const ListUl = (props) =>{
+const ListUl = memo((props) =>{
     console.log(props.todolist);
 
     return(
         <>
-            {props.todolist.map((v) => {
+            {props.todolist.map((v, i) => {
                 return(
-                    <li>{v}</li>
+                    <Content key={i} value = {v}></Content>
                 )
             })}
         </>
     );
-}
+});
 
 export default ListUl;
