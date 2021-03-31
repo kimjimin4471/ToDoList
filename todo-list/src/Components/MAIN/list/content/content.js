@@ -7,9 +7,11 @@ const Content = (props) => {
     const onClickContent = () =>{
         if(contentChecked){
             setContentChecked(false);
+            return;
         }
         else {
             setContentChecked(true);
+            return;
         }
     };
 
