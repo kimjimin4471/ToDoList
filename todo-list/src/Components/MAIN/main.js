@@ -19,6 +19,7 @@ const MainPage = memo(() => {
             ], console.log(todolist));
             setInputList("");
         }
+        //빈칸 구별
         else {
             alert("내용을 입력하세요.");
         }
@@ -37,7 +38,7 @@ const MainPage = memo(() => {
                     <ListUl todolist = {todolist}></ListUl>
                 </s.listContainer>
             </s.MainContainer>
-        </s.ContentCenter>
+        </s.ContentCenter>   
     );
 });
 
