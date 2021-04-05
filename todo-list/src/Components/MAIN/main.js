@@ -12,6 +12,7 @@ const MainPage = memo(() => {
 
     const onSubmitList = (e) => {
         e.preventDefault();
+        //공백 구별
         if(inputList !== "") {
             setTodolist([
                 ...todolist,
@@ -19,7 +20,6 @@ const MainPage = memo(() => {
             ], console.log(todolist));
             setInputList("");
         }
-        //빈칸 구별
         else {
             alert("내용을 입력하세요.");
         }
